@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6tbr77uhi5cp"]
+
+[ext_resource type="Texture2D" uid="uid://qqrpeqotx04s" path="res://Spirtes/AA3 Heros.png" id="1_3ckbs"]
+[ext_resource type="PackedScene" uid="uid://bp2mu1lm71b0s" path="res://Scenes/Prefabs/player.tscn" id="2_aol4m"]
+
+[node name="Main" type="Node2D" unique_id=264747233]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1778244112]
+texture = ExtResource("1_3ckbs")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=247175835]
+position = Vector2(9, 613)
+texture = ExtResource("1_3ckbs")
+
+[node name="Player" parent="." unique_id=675291323 instance=ExtResource("2_aol4m")]
