@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qqrpeqotx04s"
-path="res://.godot/imported/AA3 Heros.png-7d7b7028f667c4223285026850d48805.ctex"
+uid="uid://dxt0h4lowkrly"
+path="res://.godot/imported/Character2M_3_pickup_ground_7.png-6e7a35ef63d3584e6553601c5e93612e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spirtes/AA3 Heros.png"
-dest_files=["res://.godot/imported/AA3 Heros.png-7d7b7028f667c4223285026850d48805.ctex"]
+source_file="res://Spirtes/Clothes 3/Character2M_3_pickup_ground_7.png"
+dest_files=["res://.godot/imported/Character2M_3_pickup_ground_7.png-6e7a35ef63d3584e6553601c5e93612e.ctex"]
 
 [params]
 

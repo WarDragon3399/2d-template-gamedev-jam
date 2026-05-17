@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://b6tbr77uhi5cp"]
+
+[ext_resource type="Texture2D" uid="uid://bcmhi5kuq4gik" path="res://Spirtes/Autotile_Grass_and_Dirt_Path_Tileset.png" id="1_3ckbs"]
+[ext_resource type="PackedScene" uid="uid://bp2mu1lm71b0s" path="res://Scenes/Prefabs/player.tscn" id="2_aol4m"]
+[ext_resource type="PackedScene" uid="uid://c2um221yxquhj" path="res://Scripts/wire_node.tscn" id="3_aol4m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aol4m"]
+atlas = ExtResource("1_3ckbs")
+region = Rect2(32, 144, 48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ckbs"]
+size = Vector2(481, 142)
+
+[node name="Main" type="Node2D" unique_id=264747233]
+
+[node name="Player" parent="." unique_id=675291323 instance=ExtResource("2_aol4m")]
+position = Vector2(190, 245)
+walk_speed = 400.0
+run_speed = 1000.0
+jump_force = -1000.0
+gravity = 1000.0
+wire_speed = 1000
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1920905489]
+position = Vector2(251, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1778244112]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=958509621]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2065655799]
+position = Vector2(727, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=841412609]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1829622700]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=2077049877]
+position = Vector2(1206, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=86467264]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2066786185]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=308997598]
+position = Vector2(1206, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1354300374]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1330108330]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1694795001]
+position = Vector2(1689, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=519275017]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=930648042]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=872128449]
+position = Vector2(2165, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" unique_id=117944920]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1364360278]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=96135435]
+position = Vector2(2644, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7" unique_id=1242903521]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=591038776]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1431725626]
+position = Vector2(2644, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8" unique_id=1466858051]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=983674458]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=2147366581]
+position = Vector2(3032, 44)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9" unique_id=1268759998]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1144096452]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=1576246795]
+position = Vector2(3508, 44)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D10" unique_id=987415334]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=224880276]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=71757513]
+position = Vector2(3987, 44)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D11" unique_id=1973157855]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=1413145754]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=204167099]
+position = Vector2(4454, 44)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D12" unique_id=64853648]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1099735003]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=361679462]
+position = Vector2(6268, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D13" unique_id=1112593249]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=434339376]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=1373490285]
+position = Vector2(6744, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D14" unique_id=234847600]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1934901841]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="." unique_id=221040566]
+position = Vector2(7223, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D15" unique_id=2120024392]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15" unique_id=2018649585]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="." unique_id=1586094727]
+position = Vector2(7690, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D16" unique_id=2145789853]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16" unique_id=1808346437]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="WireNode" parent="." unique_id=1948301688 instance=ExtResource("3_aol4m")]
+position = Vector2(5276, -249)
+scale = Vector2(3, 3)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtttkov4m6rxh"]
+
+[ext_resource type="Script" uid="uid://cesf1i6peu2mf" path="res://Scripts/wire_connector.gd" id="1_phjrn"]
+
+[node name="WireConnector" type="Node2D" unique_id=1351088734]
+script = ExtResource("1_phjrn")

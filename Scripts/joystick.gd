@@ -9,10 +9,11 @@ var input_vector := Vector2.ZERO
 var center := Vector2.ZERO
 
 func _ready():
-	base.visible = false
+	await get_tree().process_frame
 	center = base.size / 2
 	knob.pivot_offset = knob.size / 2
 	_reset_knob()
+	base.visible = false
 
 func _input(event):
 
