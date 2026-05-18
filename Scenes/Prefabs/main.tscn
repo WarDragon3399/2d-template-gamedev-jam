@@ -414,6 +414,105 @@ texture = SubResource("AtlasTexture_aol4m")
 position = Vector2(1.5, -10)
 shape = SubResource("RectangleShape2D_3ckbs")
 
+[node name="Node2D6" type="Node2D" parent="." unique_id=2127394368]
+position = Vector2(11582, -2669)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D6" unique_id=592741660]
+position = Vector2(251, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D" unique_id=1898302746]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D" unique_id=1951573278]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D6" unique_id=1709601902]
+position = Vector2(727, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D2" unique_id=868418531]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D2" unique_id=1085557450]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D6" unique_id=193274267]
+position = Vector2(1206, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D3" unique_id=572393978]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D3" unique_id=1827407016]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D6" unique_id=1018241337]
+position = Vector2(1206, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D4" unique_id=443183025]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D4" unique_id=1827684334]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Node2D6" unique_id=406827495]
+position = Vector2(1689, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D5" unique_id=1242514147]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D5" unique_id=1095191379]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D6" unique_id=1347239284]
+position = Vector2(2165, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D6" unique_id=1402065291]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D6" unique_id=1650358342]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D6" unique_id=72249928]
+position = Vector2(2644, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D7" unique_id=596203534]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D7" unique_id=1890978618]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D6" unique_id=1193322341]
+position = Vector2(2644, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D6/StaticBody2D8" unique_id=493086364]
+z_index = 1
+scale = Vector2(10, 10)
+texture = SubResource("AtlasTexture_aol4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/StaticBody2D8" unique_id=693929084]
+position = Vector2(1.5, -10)
+shape = SubResource("RectangleShape2D_3ckbs")
+
 [node name="WireNode" parent="." unique_id=1948301688 instance=ExtResource("3_aol4m")]
 position = Vector2(5276, -249)
 scale = Vector2(3, 3)

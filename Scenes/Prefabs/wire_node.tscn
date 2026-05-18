@@ -14,28 +14,37 @@ region = Rect2(240, 64, 48, 16)
 [node name="WireNode" type="Node2D" unique_id=1948301688 groups=["wire"]]
 script = ExtResource("1_yp0mw")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1607677108]
+[node name="EntryArea" type="Area2D" parent="." unique_id=1607677108]
 position = Vector2(-393, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=627513557]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntryArea" unique_id=627513557]
 shape = SubResource("CircleShape2D_rtyna")
 
-[node name="Marker2D" type="Area2D" parent="." unique_id=805006432]
+[node name="ExitArea" type="Area2D" parent="." unique_id=2121897912]
 position = Vector2(393, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D" unique_id=242082144]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" unique_id=873296366]
 shape = SubResource("CircleShape2D_rtyna")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=268928826]
 scale = Vector2(16.519999, 1)
 texture = SubResource("AtlasTexture_a6l0y")
 
-[node name="InteractIcon" type="Sprite2D" parent="." unique_id=1872984324]
+[node name="EntryIcon" type="Sprite2D" parent="." unique_id=1872984324]
 visible = false
 modulate = Color(1.17155, 0, 0.33205998, 0.5254902)
 position = Vector2(-393, 0)
 scale = Vector2(0.47641784, -0.48092103)
 texture = ExtResource("3_a6l0y")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="ExitIcon" type="Sprite2D" parent="." unique_id=1192026982]
+visible = false
+modulate = Color(1.17155, 0, 0.33205998, 0.5254902)
+position = Vector2(393, 0)
+scale = Vector2(0.47641784, -0.48092103)
+texture = ExtResource("3_a6l0y")
+
+[connection signal="body_entered" from="EntryArea" to="." method="_on_entry_entered"]
+[connection signal="body_exited" from="EntryArea" to="." method="_on_entry_exited"]
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_entered"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_exited"]
