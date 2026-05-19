@@ -16,6 +16,7 @@ size = Vector2(481, 142)
 
 [node name="Player" parent="." unique_id=878169955 instance=ExtResource("2_aol4m")]
 position = Vector2(190, 245)
+wire_speed = null
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=1464628877]
 
