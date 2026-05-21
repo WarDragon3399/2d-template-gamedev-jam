@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cklbd6yrehnyn" path="res://Spirtes/Clothes 3/Character2M_3_fall_1.png" id="27_3ajre"]
 [ext_resource type="Texture2D" uid="uid://dtp4c01o3nphw" path="res://Spirtes/Clothes 3/Character2M_3_run_0.png" id="28_ymft0"]
 [ext_resource type="Texture2D" uid="uid://d3mydoh2pquje" path="res://Spirtes/Clothes 3/Character2M_3_run_1.png" id="29_xj0hg"]
-[ext_resource type="Texture2D" uid="uid://ddd887hg0elcw" path="res://Spirtes/Rayitos_ni_idea.png" id="30_o0o8v"]
+[ext_resource type="Texture2D" uid="uid://diair5lhlwhs0" path="res://Spirtes/Thunder2.png" id="30_o0o8v"]
 [ext_resource type="Texture2D" uid="uid://bv401taegcuch" path="res://Spirtes/Clothes 3/Character2M_3_run_2.png" id="30_u162p"]
 [ext_resource type="Texture2D" uid="uid://d0ga7crlag2pf" path="res://Spirtes/Clothes 3/Character2M_3_run_3.png" id="31_ong88"]
 [ext_resource type="Texture2D" uid="uid://bwcc5ba7wxdyh" path="res://Spirtes/Clothes 3/Character2M_3_run_4.png" id="32_elvhq"]
@@ -35,27 +35,15 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0qfkv"]
 atlas = ExtResource("30_o0o8v")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1wtp"]
 atlas = ExtResource("30_o0o8v")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(768, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shwlg"]
 atlas = ExtResource("30_o0o8v")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i64xu"]
-atlas = ExtResource("30_o0o8v")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f68l1"]
-atlas = ExtResource("30_o0o8v")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_25cvw"]
-atlas = ExtResource("30_o0o8v")
-region = Rect2(80, 0, 16, 16)
+region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_33gpj"]
 animations = [{
@@ -175,23 +163,14 @@ animations = [{
 "speed": 24.0
 }, {
 "frames": [{
-"duration": 2.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_0qfkv")
 }, {
-"duration": 2.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_r1wtp")
 }, {
-"duration": 2.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_shwlg")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_i64xu")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_f68l1")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_25cvw")
 }],
 "loop": true,
 "name": &"Wire",
@@ -213,7 +192,7 @@ script = ExtResource("1_pv3ct")
 z_index = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_33gpj")
-animation = &"Wire"
+animation = &"Walk"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1058975016]

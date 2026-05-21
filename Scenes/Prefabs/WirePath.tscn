@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bbdnnfe2sqlro"]
+
+[ext_resource type="Script" uid="uid://dd118d2lq43xd" path="res://Scripts/WirePath.gd" id="1_gco6f"]
+[ext_resource type="Texture2D" uid="uid://cl65poyuxw0dx" path="res://Spirtes/lightCircleWhite1.png" id="2_tsw65"]
+
+[sub_resource type="Curve2D" id="Curve2D_n1jf8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gco6f"]
+radius = 64.0
+
+[node name="WirePath" type="Node2D" unique_id=1411776632]
+script = ExtResource("1_gco6f")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2098536460]
+curve = SubResource("Curve2D_n1jf8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=928455677]
+
+[node name="EntryArea" type="Area2D" parent="." unique_id=2028099203]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntryArea" unique_id=765882205]
+shape = SubResource("CircleShape2D_gco6f")
+
+[node name="EntryIcon" type="Sprite2D" parent="EntryArea" unique_id=105176742]
+modulate = Color(0.8666667, 0.2, 0, 0.5803922)
+texture = ExtResource("2_tsw65")
+
+[node name="ExitArea" type="Area2D" parent="." unique_id=629641149]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" unique_id=528919336]
+shape = SubResource("CircleShape2D_gco6f")
+
+[node name="ExitIcon" type="Sprite2D" parent="ExitArea" unique_id=1591176910]
+modulate = Color(0.8666667, 0.2, 0, 0.5803922)
+self_modulate = Color(1, 1, 1, 0.5803922)
+texture = ExtResource("2_tsw65")
+
+[connection signal="body_entered" from="EntryArea" to="." method="_on_entry_area_body_entered"]
+[connection signal="body_exited" from="EntryArea" to="." method="_on_entry_area_body_exited"]
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]

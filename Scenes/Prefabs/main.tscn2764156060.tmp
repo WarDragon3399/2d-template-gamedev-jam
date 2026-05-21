@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bcmhi5kuq4gik" path="res://Spirtes/Autotile_Grass_and_Dirt_Path_Tileset.png" id="1_3ckbs"]
 [ext_resource type="PackedScene" uid="uid://bp2mu1lm71b0s" path="res://Scenes/Prefabs/player.tscn" id="2_aol4m"]
-[ext_resource type="Script" uid="uid://dd118d2lq43xd" path="res://Scripts/WirePath.gd" id="5_2epwg"]
-[ext_resource type="Texture2D" uid="uid://cl65poyuxw0dx" path="res://Spirtes/lightCircleWhite1.png" id="6_njomo"]
+[ext_resource type="PackedScene" uid="uid://c2um221yxquhj" path="res://Scenes/Prefabs/wire_node.tscn" id="3_aol4m"]
+[ext_resource type="PackedScene" uid="uid://dtttkov4m6rxh" path="res://Scenes/Prefabs/wire_connector.tscn" id="4_x1nqp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aol4m"]
 atlas = ExtResource("1_3ckbs")
@@ -12,21 +12,11 @@ region = Rect2(32, 144, 48, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ckbs"]
 size = Vector2(481, 142)
 
-[sub_resource type="Curve2D" id="Curve2D_raghg"]
-bake_interval = 28.2
-_data = {
-"points": PackedVector2Array(-1037.8864, 498.7302, 0, 0, 0, 0, -263.38284, 71.44583, 0, 0, 367, -646, 0, 0, 0, 0, 1032, -495)
-}
-point_count = 3
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gco6f"]
-radius = 64.0
-
 [node name="Main" type="Node2D" unique_id=1420809502]
 
 [node name="Player" parent="." unique_id=878169955 instance=ExtResource("2_aol4m")]
 position = Vector2(190, 245)
-jump_force = -1000.0
+wire_speed = null
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=1464628877]
 
@@ -523,39 +513,31 @@ texture = SubResource("AtlasTexture_aol4m")
 position = Vector2(1.5, -10)
 shape = SubResource("RectangleShape2D_3ckbs")
 
-[node name="WirePath" type="Node2D" parent="." unique_id=1411776632]
-position = Vector2(855, 309)
-script = ExtResource("5_2epwg")
+[node name="WireNode" parent="." unique_id=1717062966 instance=ExtResource("3_aol4m")]
+position = Vector2(5276, -249)
+scale = Vector2(3, 3)
 
-[node name="Path2D" type="Path2D" parent="WirePath" unique_id=2098536460]
-curve = SubResource("Curve2D_raghg")
+[node name="WireNode5" parent="." unique_id=1672272255 instance=ExtResource("3_aol4m")]
+position = Vector2(2572, -1012.00006)
+rotation = -1.5707964
+scale = Vector2(3, 3)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="WirePath/Path2D" unique_id=928455677]
-rotation = -1.3923706
-loop = false
+[node name="WireNode2" parent="." unique_id=466655653 instance=ExtResource("3_aol4m")]
+position = Vector2(8891, -249)
+scale = Vector2(3, 3)
+connector = NodePath("../WireConnector")
 
-[node name="EntryArea" type="Area2D" parent="WirePath" unique_id=2028099203]
+[node name="WireNode4" parent="." unique_id=1028047578 instance=ExtResource("3_aol4m")]
+position = Vector2(11252, -2602)
+scale = Vector2(3, 3)
+connector = NodePath("../WireConnector")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WirePath/EntryArea" unique_id=765882205]
-shape = SubResource("CircleShape2D_gco6f")
+[node name="WireNode3" parent="." unique_id=1270122646 instance=ExtResource("3_aol4m")]
+position = Vector2(10069, -1427)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+connector = NodePath("../WireConnector")
 
-[node name="EntryIcon" type="Sprite2D" parent="WirePath/EntryArea" unique_id=105176742]
-visible = false
-modulate = Color(0.8666667, 0.2, 0, 0.5803922)
-texture = ExtResource("6_njomo")
-
-[node name="ExitArea" type="Area2D" parent="WirePath" unique_id=629641149]
-position = Vector2(1028, -496)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WirePath/ExitArea" unique_id=528919336]
-shape = SubResource("CircleShape2D_gco6f")
-
-[node name="ExitIcon" type="Sprite2D" parent="WirePath/ExitArea" unique_id=1591176910]
-visible = false
-modulate = Color(0.8666667, 0.2, 0, 0.5803922)
-texture = ExtResource("6_njomo")
-
-[connection signal="body_entered" from="WirePath/EntryArea" to="WirePath" method="_on_entry_area_body_entered"]
-[connection signal="body_exited" from="WirePath/EntryArea" to="WirePath" method="_on_entry_area_body_exited"]
-[connection signal="body_entered" from="WirePath/ExitArea" to="WirePath" method="_on_exit_area_body_entered"]
-[connection signal="body_exited" from="WirePath/ExitArea" to="WirePath" method="_on_exit_area_body_exited"]
+[node name="WireConnector" parent="." unique_id=856354662 instance=ExtResource("4_x1nqp")]
+position = Vector2(4787, -2087)
+connected_wires = Array[NodePath]([NodePath("../WireNode2"), NodePath("../WireNode3"), NodePath("../WireNode4")])
