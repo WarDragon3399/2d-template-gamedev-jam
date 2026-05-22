@@ -20,5 +20,5 @@ func physics_update(delta):
 		state_machine.change_state("Fall")
 		
 	#wire interaction	
-	if Input.is_action_just_pressed("Interact") and controller.nearby_wire:
+	if controller.interact_pressed  and controller.nearby_wire:
 		state_machine.change_state("Wire")			

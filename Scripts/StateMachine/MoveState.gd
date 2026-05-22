@@ -19,11 +19,15 @@ func physics_update(delta):
 	if controller.input_direction == 0:
 		state_machine.change_state("Idle")
 	
+	# Move to Run
+	if controller.is_running:
+		state_machine.change_state("Run")
+	
 	# Jump
-	if Input.is_action_just_pressed("Jump") and controller.is_on_floor():
+	if controller.jump_pressed  and controller.is_on_floor():
 		controller.locomotion.jump()
 		state_machine.change_state("Jump")
 	
 	#wire interaction	
-	if Input.is_action_just_pressed("Interact") and controller.nearby_wire:
+	if controller.interact_pressed and controller.nearby_wire:
 		state_machine.change_state("Wire")		

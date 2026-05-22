@@ -8,6 +8,7 @@ var player
 var walk_speed := 600.0
 var gravity := 1000.0
 var jump_force := -600.0
+var run_speed := 800.0
 
 var current_wire = null
 var wire_progress := 0.0
@@ -19,7 +20,12 @@ func apply_gravity(delta):
 		player.velocity.y += gravity * delta
 
 func move(direction):
-	player.velocity.x = (direction * walk_speed)
+	var speed = walk_speed
+	if player.is_running:
+		speed = run_speed
+	player.velocity.x = (
+		direction * speed
+	)
 	player.move_and_slide()
 	
 func jump():
