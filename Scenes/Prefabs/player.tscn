@@ -207,13 +207,15 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Player" type="CharacterBody2D" unique_id=237796137]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_pv3ct")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=636150935]
 z_index = 1
+texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_33gpj")
-animation = &"Wire"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1058975016]
@@ -221,8 +223,7 @@ position = Vector2(0, 18)
 shape = SubResource("CapsuleShape2D_0ctox")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1432966149]
-offset = Vector2(2300, -300)
-zoom = Vector2(0.2, 0.5)
+offset = Vector2(350, -150)
 process_callback = 0
 position_smoothing_enabled = true
 

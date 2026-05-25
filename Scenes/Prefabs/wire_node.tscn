@@ -31,15 +31,13 @@ scale = Vector2(16.519999, 1)
 texture = SubResource("AtlasTexture_a6l0y")
 
 [node name="EntryIcon" type="Sprite2D" parent="." unique_id=1872984324]
-visible = false
-modulate = Color(1.17155, 0, 0.33205998, 0.5254902)
+modulate = Color(0.98502016, 0.9530932, 0.2142125, 0.5254902)
 position = Vector2(-393, 0)
 scale = Vector2(0.47641784, -0.48092103)
 texture = ExtResource("3_a6l0y")
 
 [node name="ExitIcon" type="Sprite2D" parent="." unique_id=1192026982]
-visible = false
-modulate = Color(1.17155, 0, 0.33205998, 0.5254902)
+modulate = Color(0.7007587, 0.98679286, 0.7448811, 0.5254902)
 position = Vector2(393, 0)
 scale = Vector2(0.47641784, -0.48092103)
 texture = ExtResource("3_a6l0y")

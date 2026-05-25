@@ -31,7 +31,7 @@ texture = ExtResource("2_tsw65")
 shape = SubResource("CircleShape2D_gco6f")
 
 [node name="ExitIcon" type="Sprite2D" parent="ExitArea" unique_id=1591176910]
-modulate = Color(0.8666667, 0.2, 0, 0.5803922)
+modulate = Color(0.75793487, 1, 0.72901326, 0.5254902)
 self_modulate = Color(1, 1, 1, 0.5803922)
 texture = ExtResource("2_tsw65")
 

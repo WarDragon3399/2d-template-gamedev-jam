@@ -3,10 +3,10 @@
 
 extends CharacterBody2D
 @export_group("Player Locomotion ")
-@export var walk_speed := 600.0
-@export var run_speed := 800.0
-@export var gravity := 1000.0
-@export var jump_force := -600.0
+@export var walk_speed := 200
+@export var run_speed := 400
+@export var gravity := 1000
+@export var jump_force := -550
 @export var wire_speed := 1000.0
 @export var wire_direction := 1;
 
