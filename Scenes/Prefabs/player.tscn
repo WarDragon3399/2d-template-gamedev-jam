@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bp2mu1lm71b0s"]
 
 [ext_resource type="Script" uid="uid://b7mmy7jmidshk" path="res://Scripts/playerctrl.gd" id="1_pv3ct"]
-[ext_resource type="Texture2D" uid="uid://bsemhaibh2vom" path="res://Spirtes/Player.png" id="2_v1l4e"]
+[ext_resource type="SpriteFrames" uid="uid://d2ehulrw2x4rp" path="res://Animation/Bunny.tres" id="2_0ctox"]
 [ext_resource type="Script" uid="uid://dc0lnftjs55bx" path="res://Scripts/joystick.gd" id="3_0ctox"]
 [ext_resource type="Texture2D" uid="uid://cl65poyuxw0dx" path="res://Spirtes/lightCircleWhite1.png" id="4_cb7df"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ctox"]
-radius = 50.0
-height = 112.0
+radius = 23.0
+height = 88.0
 
 [sub_resource type="Curve" id="Curve_0ctox"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
@@ -19,8 +19,11 @@ point_count = 2
 position = Vector2(170, 277)
 script = ExtResource("1_pv3ct")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=526033612]
-texture = ExtResource("2_v1l4e")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Player" unique_id=480952028]
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("2_0ctox")
+animation = &"DigF"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2048716926]
 shape = SubResource("CapsuleShape2D_0ctox")
@@ -29,6 +32,7 @@ shape = SubResource("CapsuleShape2D_0ctox")
 position_smoothing_enabled = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Player" unique_id=486238577]
+visible = false
 position = Vector2(-170, -277)
 amount = 50
 lifetime = 2.0
@@ -74,3 +78,35 @@ scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(70, 70)
 texture = ExtResource("4_cb7df")
 stretch_mode = 4
+
+[node name="Button" type="Button" parent="UI" unique_id=977148227]
+anchors_preset = -1
+anchor_left = 0.84300005
+anchor_top = 0.46
+anchor_right = 0.89800006
+anchor_bottom = 0.522
+offset_left = -0.13604736
+offset_top = -0.08001709
+offset_right = 0.50390625
+offset_bottom = -0.25601196
+grow_horizontal = 0
+grow_vertical = 2
+text = "DIg"
+
+[node name="Button2" type="Button" parent="UI" unique_id=722079466]
+anchors_preset = -1
+anchor_left = 0.84300005
+anchor_top = 0.46
+anchor_right = 0.89800006
+anchor_bottom = 0.522
+offset_left = -0.13604736
+offset_top = 49.919983
+offset_right = 0.50390625
+offset_bottom = 49.743988
+grow_horizontal = 0
+grow_vertical = 2
+text = "Die
+"
+
+[connection signal="pressed" from="UI/Button" to="Player" method="dig"]
+[connection signal="pressed" from="UI/Button2" to="Player" method="die"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsemhaibh2vom"
-path="res://.godot/imported/Player.png-1e0419d12cf95e70146e57e47cf30e08.ctex"
+uid="uid://dh0augvsikffg"
+path="res://.godot/imported/Bunny_Run.png-aa552e21b94b0756dfab5609ca20e503.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spirtes/Player.png"
-dest_files=["res://.godot/imported/Player.png-1e0419d12cf95e70146e57e47cf30e08.ctex"]
+source_file="res://Spirtes/RUN/Bunny_Run.png"
+dest_files=["res://.godot/imported/Bunny_Run.png-aa552e21b94b0756dfab5609ca20e503.ctex"]
 
 [params]
 
